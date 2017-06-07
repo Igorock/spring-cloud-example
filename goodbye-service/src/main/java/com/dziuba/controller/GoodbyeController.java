@@ -1,0 +1,15 @@
+package com.dziuba.controller;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class GoodbyeController {
+
+    @RequestMapping(method = RequestMethod.GET, value = "/byUser/{user}")
+    public String goodbye(@PathVariable String user) {
+        return "Goodbye, " + user + "!";
+    }
+}
